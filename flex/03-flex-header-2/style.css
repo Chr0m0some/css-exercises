@@ -12,6 +12,15 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  /*solution*/
+  /* Explanation:
+     Padding adds space between all the html elements/content inside the header and the edge of the header.
+     We need to use justify-content: space-between to bring the left and ride side elements to the flex
+     container edges while maintaining an even space between the elements. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
 }
 
 .profile-image {
@@ -45,4 +54,27 @@ a {
 
 ul {
   list-style-type: none;
+  /* Solution */
+  /* Explanation: 
+     This element is an unordered list element which has preset css attributes assigned to it
+     such as margin and padding. Because of this, we need to reset the padding and margin 
+     to 0 so that there's no unwanted spacing. Adding diplay: flex also overrides the 
+     display: block attribute that unordered lists come with. Adding the gap also overrides
+     any spacing presets that ul's have.*/
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+}
+
+/* Solution */
+/* Explanation: 
+   display: flex command creates a flex container and everything contained in the flex container becomes children
+   of the flex container
+   align-items will center the flex items on the cross axis
+   need to add a gap between the different flex items on the left and ride side html elements   */
+.left-side, .right-side { 
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
