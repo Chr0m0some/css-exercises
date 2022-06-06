@@ -24,3 +24,28 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/* Solutions */
+body {
+  text-align: center;
+}
+
+/* Explanation:
+      I thought I needed to create a separate flex container for the title to justify the title in the center 
+      but the body text-align already centers the title. It makes sense for the container to be a flex container
+      so that the image/text items can orient and center horizontally.  */
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.item {
+  max-width: 200px;
+}

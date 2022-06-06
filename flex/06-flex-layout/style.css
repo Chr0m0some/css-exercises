@@ -25,3 +25,56 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+/* Solutions */
+/* Explanation:
+      The main trouble I had with this problem was knowing how to create space.
+    I initially put justify-content: space-between in the body so that the header
+    and footer would be pushed to the start and end line while the content
+    would be aligned to the middle using align-items: center. However logical this
+    was, it was not the best way to go about it. The best way to go about this was
+    to use flex shorthand to make the content grow and fill the empty space in the middle
+    pushing the footer down. Although, both work. I think it's nice to implement 
+    flex grow and shrink.
+      Furthermore, I learned how to style links and get rid of the underline. */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+.header, 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 16px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+a:link {
+  text-decoration: none;
+  color: dimgray;
+}

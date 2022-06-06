@@ -64,3 +64,35 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+/* Solutions */
+/* Explanation:
+      Visually the modal is split between the icon side and everything else that contains the header,
+    close icon, text, and buttons. That's why the best option is to take everything aforementioned 
+    and condense them in a div container. Then the display: flex on the modal class can arrange the 
+    icon and container horizontally. To prevent the icon from being squished, it has to be inhibited
+    from squishing by setting flex-shrink to 0. 
+      For the header class, the justify-content: space-between pushes the items to the first line and
+      end line and puts even space between the items.*/
+.modal {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.text {
+  margin-bottom: 16px;
+}
